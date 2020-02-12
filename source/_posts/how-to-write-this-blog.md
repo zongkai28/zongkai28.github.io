@@ -1,6 +1,6 @@
 ---
-title: how_to_write_this_blog
-date: 2020-02-09 17:41:14
+title: how-to-write-this-blog
+date: 2020-02-13 05:58:04
 tags:
 ---
 
@@ -35,7 +35,7 @@ jkelly和hexo均支持一次配置完成后，使用markdown编辑博客内容�
 
 考虑到jkelly开发环境的部署难度，碰巧又在[hexo模板](https://hexo.io/themes/)中看到了一个喜欢的[三栏式布局](https://yelog.org/)，最终就决定使用hexo了。
 
-![](.\img\hexo_on_github pages.jpg)
+![](how-to-write-this-blog/hexo_on_github_pages.png)
 
 跟jkelly类似，hexo也是一个将markdown转换为静态网页的工具，不同点在于GitHub Pages内置了jkelly开发环境，我们直接上传jkelly源码即可。hexo没有GitHub Pages在线解析的支持，我们需要本地完成解析转换后，直接将得到的html页面归档至GitHub Pages中。好处是hexo是基于node.js的，开发环境相当友好。
 
@@ -157,12 +157,7 @@ public/
 
 1. **确认电脑上已有node和git环境。node安装非常简单，这是我们选择hexo，而不是jkelly的初衷；**
 2. **拉取github io博客Repository中的`hexo_source`分支到本地；**
-3. **打开`Command Prompt`，切换至`hexo_source`分支目录，执行如下命令下载必要的npm包后，就可以正常开展博客编辑和部署工作了；**
-
-> - npm install hexo
->- npm install hexo-deployer-git
-> - npm install
->
+3. **打开`Command Prompt`，切换至`hexo_source`分支目录，执行`npm install`命令即可下载必要的npm包后，正常开展博客编辑和部署工作了。因为hexo依赖的包都记录在`package.json`文件中了，`npm install`命令可直接根据列表安装所需要的包；**
 
 ## 编辑草稿
 
@@ -172,9 +167,9 @@ public/
 
 ## 显示图片
 
- 安装图片插件
+ 安装图片插件，将安装image包，并且在包`package.json`中添加，重新下载后只要执行npm install即可。
 
- npm install hexo-asset-image --save 
+注意，官方要求的：npm install hexo-asset-image --save，不行，必须用：npm install https://github.com/CodeFalling/hexo-asset-image --save，修正 了问题。
 
  在_config.yml配置文件中，修改为 post_asset_folder: true， 然后新建一篇文章 
 
