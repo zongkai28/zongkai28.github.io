@@ -50,47 +50,47 @@ jkelly和hexo均支持一次配置完成后，使用markdown编辑博客内容�
 
 1. **安装 Node.js**
 
-> - 前往 https://nodejs.org/en/，点击 8.9.1 LTS 下载；
+> - 前往 https://nodejs.org/en/，点击`8.9.1 LTS`下载；
 > - 安装；
-> - 打开 Command Prompt， 输入 node -v，得到：v8.9.1，表明安装成功；
+> - 打开`Command Prompt`，输入`node -v`，得到：`v8.9.1`，表明安装成功；
 >
 
 2. **安装 Git**
 
 > - 前往 https://git-scm.com/，点击 Downloads，点击 Windows下载；
 > - 安装；
-> - 打开 Command Prompt， 输入 git --version得到：git version 2.15.0.windows.1，表明安装成功；
+> - 打开`Command Prompt`， 输入`git --version`得到：`git version 2.15.0.windows.1`，表明安装成功；
 >
 
 3. **使用淘宝NPM镜像**
 
-- > 执行$ npm install -g cnpm --registry=https://registry.npm.taobao.org，切换为淘宝镜像。后续的npm指令替换为cnpm指令，可加快下载速度。
+- > 执行`$ npm install -g cnpm --registry=https://registry.npm.taobao.org`，切换为淘宝镜像。后续的`npm`指令替换为`cnpm`指令，可加快下载速度。
 
 4. **安装 Hexo**
 
-> - 打开 Command Prompt输入npm install -g hexo-cli，回车开始安装；
-> - 输入 hexo -v得到 hexo-cli: 1.0.4 等一串数据表示安装成功；
+> - 打开`Command Prompt`输入`npm install -g hexo-cli`，回车开始安装；
+> - 输入`hexo -v`得到`hexo-cli: 1.0.4`等一串数据表示安装成功；
 >
 
 5. **创建本地博客测试安装**
 
 > - 在D盘下创建文件夹 blog；
-> - 打开 Command Prompt切换至blog目录；
-> - 输入 hexo init 将 blog 文件夹初始化成一个博客文件夹；
-> - 输入 npm install 安装依赖包；
-> - 输入 hexo g 生成（generate）网页。由于我们还没创建任何博客，生成的网页会展示 Hexo 里面自带了一个 Hello World 的博客；
-> - 输入 hexo s 将生成的网页放在了本地服务器（server）；
+> - 打开`Command Prompt`切换至blog目录；
+> - 输入`hexo init`将 blog 文件夹初始化成一个博客文件夹；
+> - 输入`npm install`安装依赖包；
+> - 输入`hexo g`生成网页。由于我们还没创建任何博客，生成的网页会展示 Hexo 里面自带了一个 Hello World 的博客；
+> - 输入`hexo s`将生成的网页放在了本地服务器；
 > - 浏览器里输入 http://localhost:4000/ 就可以看到Hello World博客；
-> - 回到Command Prompt，按 Ctrl+C 结束。此时再看 http://localhost:4000/ 就无法访问了。
+> - 回到`Command Prompt`，按`Ctrl+C`结束。此时再看`http://localhost:4000/`就无法访问了。
 >
 
 6. **发布一篇博客**
 
-> - 继续在Command Prompt里，输入 `hexo new "My First Post"`；
+> - 继续在`Command Prompt`里，输入 `hexo new "My First Post"`；
 >
-> - 在 `.\blog\source_posts` 路径下，会有一个My-First-Post.md的文件。 编辑该文件后保存。
+> - 在`.\blog\source_posts`路径下，会有一个`My-First-Post.md`的文件。 编辑该文件后保存。
 >
-> - 回到Command Prompt，输入 `hexo g`和 `hexo s`后，即可在http://localhost:4000查看成果。
+> - 回到`Command Prompt`，输入`hexo g`和`hexo s`后，即可在`http://localhost:4000`查看成果。
 >
 
 # 使用
@@ -101,13 +101,13 @@ jkelly和hexo均支持一次配置完成后，使用markdown编辑博客内容�
 
 1. **获取 Github 对应的 Repository 的链接。**
 
-> - 登陆 Github，进入到名称为xxx.github.io的Repository中；
+> - 登陆 Github，进入到名称为`xxx.github.io`的Repository中；
 > - 复制URL备用；
 >
 
 2. **修改博客的配置文件**
 
-- > 打开本地博客配置文件 `./blog/_config.yml`，找到 `#Deployment`，填入以下内容：
+- > 打开本地博客配置文件`./blog/_config.yml`，找到`#Deployment`，填入以下内容：
 
 ```
 # Deployment
@@ -120,9 +120,9 @@ deploy:
 
 3. **部署**
 
-> - 打开 Command Prompt切换至blog目录；
+> - 打开`Command Prompt`切换至blog目录；
 > - 输入`npm install hexo-deployer-git --save`安装hexo-deployer-git，此步骤只需要做一次。
-> - 输入 `hexo d`，得到 `INFO Deploy done: git` 即为部署成功。原来Repository中的文件会被自动覆盖；
+> - 输入`hexo d`，得到`INFO Deploy done: git`即为部署成功。原来Repository中的文件会被自动覆盖；
 >
 
 4. **查看成果**
@@ -134,12 +134,12 @@ deploy:
 
 前面转换完成的hexo网页已经推送保存至Repository对应的master分支了，那本地的hexo源文件是否也可以保存在github中呢，可以参考[利用Hexo在多台电脑上提交和更新github pages博客](https://www.jianshu.com/p/0b1fccce74e0)中的描述完成hexo源文件归档。
 
-1. **在github io博客Repository中创建hexo_source分支；**
-2. **clone创建的hexo_source分支到本地，并删除全部文件后提交，确保hexo_source分支目录为空；**
-3. **将前面的hexo源码拷贝至本地hexo_source分支目录中；**
-4. **打开 Command Prompt切换至hexo_source分支目录，执行`hexo clean`、`git add .`、`git commit -m '提交说明'`、`git push`即可将博客hexo源码归档至github的hexo_source分支中 ；**
+1. **在github io博客Repository中创建`hexo_source`分支；**
+2. **clone创建的`hexo_source`分支到本地，并删除全部文件后提交，确保`hexo_source`分支目录为空；**
+3. **将前面的hexo源码拷贝至本地`hexo_source`分支目录中；**
+4. **打开`Command Prompt`切换至`hexo_source`分支目录，执行`hexo clean`、`git add .`、`git commit -m '提交说明'`、`git push`即可将博客hexo源码归档至github的`hexo_source`分支中 ；**
 
-从.gitignore文件中可见如下文件和编译无关，不用提交。以后如果遇到包的版本变更频繁，也可以考虑提交node_modules/归档。
+从`.gitignore`文件中可见如下文件和编译无关，不用提交。以后如果遇到包的版本变更频繁，也可以考虑提交node_modules/归档。
 
 ```
 .DS_Store
@@ -153,19 +153,16 @@ public/
 
 ## 更换电脑编辑 
 
-在没有原始文件的电脑上修改
+在github上编辑博客的最显著的一个优势是可以充分利用git，数据保存在云端，替换电脑后也可以随时编辑博客。那如何在替换电脑时继续编辑呢？可以参照如下步骤：
 
-1. 拉hexo分支的原始代码到本地
+1. **确认电脑上已有node和git环境。node安装非常简单，这是我们选择hexo，而不是jkelly的初衷；**
+2. **拉取github io博客Repository中的`hexo_source`分支到本地；**
+3. **打开`Command Prompt`，切换至`hexo_source`分支目录，执行如下命令下载必要的npm包后，就可以正常开展博客编辑和部署工作了；**
 
-git clone ...
-
-2. 下载npm包(需要有node环境)
-
-npm install hexo
-
-npm install
-
-npm install hexo-deployer-git
+> - npm install hexo
+>- npm install hexo-deployer-git
+> - npm install
+>
 
 ## 编辑草稿
 
@@ -173,36 +170,34 @@ npm install hexo-deployer-git
 
 # 完善
 
+## 显示图片
+
+ 安装图片插件
+
+ npm install hexo-asset-image --save 
+
+ 在_config.yml配置文件中，修改为 post_asset_folder: true， 然后新建一篇文章 
+
 ## 更换主题
 
 可在[hexo主题](https://hexo.io/themes/)站点选择自己喜欢的主题，比如：[三栏式布局](https://github.com/yelog/hexo-theme-3-hexo)。 
 
+这里以该三栏式布局主题为例，详细步骤如下，大概思路是把整个主题的文件克隆到我们博客的主题文件夹中，在配置文件中注明使用该主题。
 
+获取主题。 
 
-
-
-## **使用 Next 主题**
-
-[更多 Hexo 的主题看这里](https://link.zhihu.com/?target=https%3A//hexo.io/themes/)
-
-这里以 Next 为例。 大概思路就是把整个主题的文件克隆到我们的主题文件夹中。在配置文件中注明使用该主题。
-
-**操作如下：**
-
-**1. 还是回到 Git Bash。 输入** `git clone https://github.com/iissnan/hexo-theme-next themes/next`
+输入** `git clone https://github.com/iissnan/hexo-theme-next themes/next`
 
 这样，该主题的文件就全部克隆到 D:\blog\themes\next 下面。
 
-
-
 **2. 修改博客配置文件**
 
-- - 打开 D:\blog_config.yml
-  - 找到 `theme:`
-  - 把 Hexo 默认的 lanscape 修改成 next。 即 `theme: next`
-  - 找到 `# Site`，添加博客名称，作者名字等。
-  - 在 `language` 后面填入 en 或者 zh-Hans，选择英文或者中文。
-  - 找到 `# URL`, 填入 url。比如 `url: https://ryanluoxu.github.io`
+- 打开 D:\blog_config.yml
+- 找到 `theme:`
+- 把 Hexo 默认的 lanscape 修改成 next。 即 `theme: next`
+- 找到 `# Site`，添加博客名称，作者名字等。
+- 在 `language` 后面填入 en 或者 zh-Hans，选择英文或者中文。
+- 找到 `# URL`, 填入 url。比如 `url: https://ryanluoxu.github.io`
 
 填入名字后会有很风骚的 © 2017 Ryan Luo Xu 的字样出现在博客底部。
 
@@ -210,7 +205,7 @@ npm install hexo-deployer-git
 
 **3. 重新生成部署即可**
 
-- - 回到 Git Bash。输入 `hexo g -d`就可以了。
+- 回到 Git Bash。输入 `hexo g -d`就可以了。
 
 先把修改的内容生成网页，再部署。
 
