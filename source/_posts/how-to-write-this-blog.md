@@ -167,11 +167,15 @@ public/
 
 ## 显示图片
 
- 安装图片插件，将安装image包，并且在包`package.json`中添加，重新下载后只要执行npm install即可。
+ 测试后会发现，使用markdown传统方式添加的图片是无法正常在网页端显示的，这是因为hexo无法正确的将本地图片路径转换为网页文件中的格式。这是我们就需要借助`hexo-asset-image`工具完成文件路径的转换，步骤如下：
 
-注意，官方要求的：npm install hexo-asset-image --save，不行，必须用：npm install https://github.com/CodeFalling/hexo-asset-image --save，修正 了问题。
+1. **打开`Command Prompt`执行如下命令安装图片路径转换工具`hexo-asset-image`。注意我们并未使用官方推荐的方式`npm install hexo-asset-image --save`，实测发现官方包有问题，无法显示图片。网上有仓库解决了该问` https://github.com/xcodebuild/hexo-asset-image`，为了避免该库后续变化，我已fork至自己账户中 。执行完该命令后会在包列表`package.json`中添加相关信息，换电脑或重新下载后只要执行`npm install`即可。**
 
- 在_config.yml配置文件中，修改为 post_asset_folder: true， 然后新建一篇文章 
+- `npm install https://github.com/zongkai28/hexo-asset-image --save`
+
+2.  **在`config.yml`配置文件中的`post_asset_folder`属性修改为`true`.**
+
+3. **使用`hexo new post test`命令新建一篇文章，可以发现在`_post`目录下同时出现了`test.md`文件和`test`文件夹，此时在`test.md`中使用`![](test/test.jpg)`即可在markdown和html中均正常显示图片。**
 
 ## 更换主题
 
