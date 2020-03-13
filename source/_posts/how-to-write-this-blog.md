@@ -49,9 +49,9 @@ tags:
 
 1. **安装`Node.js`**
 
-> - 前往 https://nodejs.org/en/，点击`8.9.1 LTS`下载；
+> - 前往 https://nodejs.org/en/，点击`12.16.1 LTS`或当前推荐的LTS版本下载；
 > - 安装；
-> - 打开`Command Prompt`，输入`node -v`，得到：`v8.9.1`，表明安装成功；
+> - 打开`Command Prompt`，输入`node -v`，得到：`v12.16.1`，表明安装成功；
 
 2. **安装`Git`**
 
@@ -66,7 +66,7 @@ tags:
 4. **安装`Hexo`**
 
 > - 打开`Command Prompt`输入`npm install -g hexo-cli`，回车开始安装；
-> - 输入`hexo -v`得到`hexo-cli: 1.0.4`等一串数据表示安装成功；
+> - 输入`hexo -v`得到`hexo-cli: 3.1.0`等一串数据表示安装成功；
 
 5. **创建本地博客测试安装**
 
@@ -148,7 +148,10 @@ public/
 
 1. **确认电脑上已有`node`和`git`环境。`node`安装非常简单，这是我们选择`hexo`，而不是`jkelly`的初衷；**
 2. **拉取`github io`博客`Repository`中的`hexo_source`分支到本地；**
-3. **打开`Command Prompt`，切换至`hexo_source`分支目录，执行`npm install`命令即可下载必要的npm包后，正常开展博客编辑和部署工作了。因为hexo依赖的包都记录在`package.json`文件中了，`npm install`命令可直接根据列表安装所需要的包；**
+3. **打开`Command Prompt`，输入`npm install -g hexo-cli`，安装`hexo`命令行工具；**
+4. **切换至`hexo_source`分支目录，执行`npm install`命令即可下载必要的npm包后，正常开展博客编辑和部署工作了。因为hexo依赖的包都记录在`package.json`文件中了，`npm install`命令可直接根据列表安装所需要的包；**
+5. **执行`hexo g`编译网页，执行`hexo s`本地预览，执行`hexo d`推送部署；**
+6. **执行`hexo clean`后清除缓存文件，即可将源文件归档至`github`；**
 
 ## 编辑草稿
 
