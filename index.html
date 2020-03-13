@@ -138,7 +138,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/2020/02/19/my-project-management-practice/D:%5C2.projects%5Czongkai28.github.io%5Csource_posts%5Cmy-project-management-practice%5Cto_do.jpg" alt="img"></p>
+        <p><img src="/2020/02/19/my-project-management-practice/to_do.jpg" alt></p>
 <p>三个部分：项目管理、技术管理、团队管理，初步计划合在一起写。</p>
 <p>项目管理部分总结一个项目指南，还有比如怎么使用git flow加强代码走查工作闭环管理，文档模板和需求追溯检查工具等。</p>
 <p>技术管理部分给出一个责任田制度，技术管理可以和团队管理合在一起写。</p>
@@ -327,6 +327,8 @@
 <li><strong>拉取<code>github io</code>博客<code>Repository</code>中的<code>hexo_source</code>分支到本地；</strong></li>
 <li><strong>打开<code>Command Prompt</code>，输入<code>npm install -g hexo-cli</code>，安装<code>hexo</code>命令行工具；</strong></li>
 <li><strong>切换至<code>hexo_source</code>分支目录，执行<code>npm install</code>命令即可下载必要的npm包后，正常开展博客编辑和部署工作了。因为hexo依赖的包都记录在<code>package.json</code>文件中了，<code>npm install</code>命令可直接根据列表安装所需要的包；</strong></li>
+<li><strong>执行<code>hexo g</code>编译网页，执行<code>hexo s</code>本地预览，执行<code>hexo d</code>推送部署；</strong></li>
+<li><strong>执行<code>hexo clean</code>后清除缓存文件，即可将源文件归档至<code>github</code>；</strong></li>
 </ol>
 <h2 id="编辑草稿"><a href="#编辑草稿" class="headerlink" title="编辑草稿"></a>编辑草稿</h2><p>我们已经知道<code>hexo</code>实际上是一款将<code>markdown</code>转换为<code>html</code>的工具，所以如果刚开始编写一篇文章，并且编辑多次后才提交可以采用如下工作方式。</p>
 <ol>
