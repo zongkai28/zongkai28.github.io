@@ -1,7 +1,10 @@
 ---
 title: 如何在`github pages`上部署个人博客
 date: 2020-02-13 05:58:04
+categories:
+- 工具
 tags:
+- hexo
 ---
 
 # 方案
