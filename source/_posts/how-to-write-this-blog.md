@@ -30,7 +30,7 @@ tags:
 
 作为后来者，我们其实已经有了更好的选择，那就是`GitHub Pages`提供的`jkelly`方案，或者`hexo`方案 。
 
-`jkelly`和`hexo`均支持一次配置完成后，使用`markdown`编辑博客内容的方式。不同点在于`jeklly`的本地开发环境 配置比较麻烦，虽然`GitHub Pages`提供了在线生成网页，通常无需配置本地`jkelly`环境，即便是基于`jkelly`模板的开发，也可以直接提交`jkelly`源文件，由`GitHub Pages`在线完成`html`文件转化。但是如果想修改网页后本地预览效果，本地开发环境还是很有必要的。而且`jkelly`不管啥文件都直接在线自动转换了，也不便于区分草稿和正式版本。关于`jkelly`的使用可以参考[Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/)。
+`jkelly`和`hexo`均支持一次配置完成后，使用`markdown`编辑博客内容的方式。不同点在于`jeklly`的本地开发环境配置比较麻烦，虽然`GitHub Pages`提供了在线生成网页，通常无需配置本地`jkelly`环境，即便是基于`jkelly`模板的开发，也可以直接提交`jkelly`源文件，由`GitHub Pages`在线完成`html`文件转化。但是如果想修改网页后本地预览效果，本地开发环境还是很有必要的。而且`jkelly`不管啥文件都直接在线自动转换了，也不便于区分草稿和正式版本。关于`jkelly`的使用可以参考[Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/)。
 
 考虑到`jkelly`开发环境的部署难度，碰巧又在[hexo模板](https://hexo.io/themes/)中看到了一个喜欢的[三栏式布局](https://yelog.org/)，最终就决定使用`hexo`了。
 
@@ -61,7 +61,7 @@ tags:
 
 3. **使用淘宝NPM镜像**
 
-- > 执行`$ npm install -g cnpm --registry=https://registry.npm.taobao.org`，切换为淘宝镜像。后续的`npm`指令替换为`cnpm`指令，可加快下载速度。
+> - 执行`$ npm install -g cnpm --registry=https://registry.npm.taobao.org`，切换为淘宝镜像。后续的`npm`指令替换为`cnpm`指令，可加快下载速度。
 
 4. **安装`Hexo`**
 
@@ -82,9 +82,7 @@ tags:
 6. **发布一篇博客**
 
 > - 继续在`Command Prompt`里，输入 `hexo new "My First Post"`；
-
 > - 在`.\blog\source_posts`路径下，会有一个`My-First-Post.md`的文件。 编辑该文件后保存。
-
 > - 回到`Command Prompt`，输入`hexo g`和`hexo s`后，即可在`http://localhost:4000`查看成果。
 
 # 使用
@@ -125,10 +123,10 @@ deploy:
 
 前面转换完成的`hexo`网页已经推送保存至`Repository`对应的`master`分支了，那本地的`hexo`源文件是否也可以保存在`github`中呢，可以参考[利用Hexo在多台电脑上提交和更新github pages博客](https://www.jianshu.com/p/0b1fccce74e0)中的描述完成`hexo`源文件归档。
 
-1. **在`github io`博客`Repository`中创建`hexo_source`分支；**
-2. **`clone`创建的`hexo_source`分支到本地，并删除全部文件后提交，确保`hexo_source`分支目录为空；**
-3. **将前面的`hexo`源码拷贝至本地`hexo_source`分支目录中；**
-4. **打开`Command Prompt`切换至`hexo_source`分支目录，执行`hexo clean`、`git add .`、`git commit -m '提交说明'`、`git push`即可将博客hexo源码归档至github的`hexo_source`分支中 ；**
+> 1. 在`github io`博客`Repository`中创建`hexo_source`分支；
+> 2. `clone`创建的`hexo_source`分支到本地，并删除全部文件后提交，确保`hexo_source`分支目录为空；
+> 3. 将前面的`hexo`源码拷贝至本地`hexo_source`分支目录中；
+> 4. 打开`Command Prompt`切换至`hexo_source`分支目录，执行`hexo clean`、`git add .`、`git commit -m '提交说明'`、`git push`即可将博客hexo源码归档至github的`hexo_source`分支中 ；
 
 从`.gitignore`文件中可见如下文件和编译无关，不用提交。以后如果遇到包的版本变更频繁，也可以考虑提交node_modules/归档。
 
@@ -146,20 +144,20 @@ public/
 
 在`github`上编辑博客的最显著的一个优势是可以充分利用`git`，数据保存在云端，替换电脑后也可以随时编辑博客。那如何在替换电脑时继续编辑呢？可以参照如下步骤：
 
-1. **确认电脑上已有`node`和`git`环境。`node`安装非常简单，这是我们选择`hexo`，而不是`jkelly`的初衷；**
-2. **拉取`github io`博客`Repository`中的`hexo_source`分支到本地；**
-3. **打开`Command Prompt`，输入`npm install -g hexo-cli`，安装`hexo`命令行工具；**
-4. **切换至`hexo_source`分支目录，执行`npm install`命令即可下载必要的npm包后，正常开展博客编辑和部署工作了。因为hexo依赖的包都记录在`package.json`文件中了，`npm install`命令可直接根据列表安装所需要的包；**
-5. **执行`hexo g`编译网页，执行`hexo s`本地预览，执行`hexo d`推送部署；**
-6. **执行`hexo clean`后清除缓存文件，即可将源文件归档至`github`；**
+> 1. 确认电脑上已有`node`和`git`环境。`node`安装非常简单，这是我们选择`hexo`，而不是`jkelly`的初衷；
+> 2. 拉取`github io`博客`Repository`中的`hexo_source`分支到本地；
+> 3. 打开`Command Prompt`，输入`npm install -g hexo-cli`，安装`hexo`命令行工具；
+> 4. 切换至`hexo_source`分支目录，执行`npm install`命令即可下载必要的npm包后，正常开展博客编辑和部署工作了。因为`hexo`依赖的包都记录在`package.json`文件中了，`npm install`命令可直接根据列表安装所需要的包；
+> 5. 执行`hexo g`编译网页，执行`hexo s`本地预览，执行`hexo d`推送部署；
+> 6. 执行`hexo clean`后清除缓存文件，即可将源文件归档至`github`；
 
 ## 编辑草稿
 
 我们已经知道`hexo`实际上是一款将`markdown`转换为`html`的工具，所以如果刚开始编写一篇文章，并且编辑多次后才提交可以采用如下工作方式。
 
-1. **打开`Command Prompt`，切换至拉取的博客`Repository`中的`hexo_source`分支；**
-2. **执行`hexo new draft`创建待编辑文章，编辑完成后`commit`至本地'Repository'，或`push`至`github`。该步骤可多次执行直到文章编辑完成；**
-3. **执行`hexo d`发表博客;**
+> 1. 打开`Command Prompt`，切换至拉取的博客`Repository`中的`hexo_source`分支；
+> 2. 执行`hexo new draft`创建待编辑文章，编辑完成后`commit`至本地'Repository'，或`push`至`github`。该步骤可多次执行直到文章编辑完成；
+> 3. 执行`hexo d`发表博客;
 
 # 完善
 
