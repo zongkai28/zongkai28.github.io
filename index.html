@@ -2,484 +2,605 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-
-  
   <title>独木林</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="独木林">
-<meta property="og:url" content="https://zongkai28.github.io/index.html">
+  <meta name="keywords" content="">
+  <meta name="description" content="独木林">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="三个部分：项目管理、技术管理、团队管理，初步计划合在一起写。 项目管理部分总结一个项目指南，还有比如怎么使用git flow加强代码走查工作闭环管理，文档模板和需求追溯检查工具等。 技术管理部分给出一个责任田制度，技术管理可以和团队管理合在一起写。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的项目管理实践">
+<meta property="og:url" content="https://zongkai28.github.io/2020/02/19/my-project-management-practice/index.html">
 <meta property="og:site_name" content="独木林">
+<meta property="og:description" content="三个部分：项目管理、技术管理、团队管理，初步计划合在一起写。 项目管理部分总结一个项目指南，还有比如怎么使用git flow加强代码走查工作闭环管理，文档模板和需求追溯检查工具等。 技术管理部分给出一个责任田制度，技术管理可以和团队管理合在一起写。">
+<meta property="og:image" content="https://zongkai28.github.io/2020/02/19/my-project-management-practice/to_do.jpg">
+<meta property="article:published_time" content="2020-02-19T01:43:48.000Z">
+<meta property="article:modified_time" content="2020-03-13T04:09:18.819Z">
 <meta property="article:author" content="宗凯">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="独木林" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="https://zongkai28.github.io/2020/02/19/my-project-management-practice/to_do.jpg">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
 
 <meta name="generator" content="Hexo 4.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">独木林</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">独木成林</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zongkai28.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/03/hello-world/" class="article-date">
-  <time datetime="2020-03-03T02:10:11.105Z" itemprop="datePublished">2020-03-03</time>
+<aside class="nav mobile">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
 </a>
+<div class="author">
+    <span>宗凯</span>
+</div>
+
+<div class="icon">
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        
+        <a title="github" href="https://github.com/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="facebook" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="instagram" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-instagram"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-reddit"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="weibo" href="http://weibo.com/u/2307534817" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/ff56736de7cf" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:jaytp@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="neteasemusic" href="https://music.163.com/#/user/home?id=88151013" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-neteasemusic"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
+<ul>
+    <li><div class="all active">全部文章<small>(2)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
     </div>
-    <footer class="article-footer">
-      <a data-url="https://zongkai28.github.io/2020/03/03/hello-world/" data-id="ck7pnshio0002bozhbygn4l6v" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="2">
 
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
 
-  
-    <article id="post-my-project-management-practice" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/19/my-project-management-practice/" class="article-date">
-  <time datetime="2020-02-19T01:43:48.000Z" itemprop="datePublished">2020-02-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/19/my-project-management-practice/">我的项目管理实践</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/2020/02/19/my-project-management-practice/to_do.jpg" alt></p>
-<p>三个部分：项目管理、技术管理、团队管理，初步计划合在一起写。</p>
-<p>项目管理部分总结一个项目指南，还有比如怎么使用git flow加强代码走查工作闭环管理，文档模板和需求追溯检查工具等。</p>
-<p>技术管理部分给出一个责任田制度，技术管理可以和团队管理合在一起写。</p>
-
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="https://zongkai28.github.io/2020/02/19/my-project-management-practice/" data-id="ck7pnshim0001bozh93kr3wom" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-write-this-blog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/13/how-to-write-this-blog/" class="article-date">
-  <time datetime="2020-02-12T21:58:04.000Z" itemprop="datePublished">2020-02-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/13/how-to-write-this-blog/">如何在`github pages`上部署个人博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><p>部署个人博客的方案有很多，可以直接在博客园、<code>CSDN</code>上注册即用，也可使用<code>WordPress</code>搭建自主性更强的个人站点。对于程序员而言，<code>GitHub Pages</code>提供的博客方案则是一个很好的折中选择，既没有博客网站那么简单，也不需要<code>WordPress</code>这么高的资源投入。</p>
-<p>基于<code>GitHub Pages</code>部署一个基本博客页面还是非常简单的，基本上5分钟完成。网上教程很多，这里文字简单描述下步骤：</p>
-<blockquote>
-<ol>
-<li>注册<code>github</code>账号；</li>
-<li>新建名称为<code>xxx.github.io</code>的<code>repository</code>；</li>
-<li>选择<code>jkelly</code>主题；</li>
-</ol>
-</blockquote>
-<p>实际上到第二步时就可以登录<code>xxx.github.io</code>访问你的个人博客了，只是这时的博客只显示简单的文本。执行第三步后，才可以借助<code>jkelly</code>得到渲染后的<code>html</code>页面。</p>
-<p>那接下来该如何添加我们自己的文章，甚至是评论区、浏览计数等等功能呢？</p>
-<p>我们知道前面的简单页面是借助于<code>github</code>在线的<code>jkelly</code>转换功能，直接转换<code>README.md</code>文件得到的。通过修改提交<code>README.md</code>文件测试可以发现 ，经过几分钟延时，个人博客中就可以得到修改后的结果。</p>
-<p>那可以通过编辑<code>README.md</code>文件完成博客编辑吗 。。。如果你的博客就一个文件，而且愿意用<code>github</code>里仅有的几个模板，不想折腾了，那也行。</p>
-<p><code>GitHub Pages</code>本质上是一个静态网站服务器，毕竟免费的，直接呈现静态网页资源负担小。所以使用<code>GitHub Pages</code>做博客网站一个最直接的方式就是直接写<code>html</code>文件。我们可以上传<code>index.html</code> 文件，这样访问博客时，系统便直接呈现该<code>index</code>，而不会再去解析<code>README.md</code>文件。</p>
-<p>我们有很多方法可以得到<code>index.html</code>文件，可以手写，更方便的是使用现成的框架，比如：<a href="https://github.com/aopstudio/aopstudio.github.io" target="_blank" rel="noopener">aopstudio.github.io</a>和<a href="https://github.com/woshidandan/xiaohe/tree/gh-pages" target="_blank" rel="noopener">gh-pages</a>。</p>
-<p>使用现成的框架可玩性更高，但也相对复杂。虽然我们只需要在框架中手写一些接口页面，博客内容可以采用<code>markdown</code>编写后，使用<code>docsify</code>转换为<code>html</code>页面的方式降低博客协作难度，比如<a href="https://segmentfault.com/a/1190000021494556" target="_blank" rel="noopener">基于Github Pages + docsify</a>、<a href="https://www.cnblogs.com/aopstudio/p/10732512.html" target="_blank" rel="noopener">使用docsify并定制以使它更强大</a>中描述的方式。</p>
-<p>作为后来者，我们其实已经有了更好的选择，那就是<code>GitHub Pages</code>提供的<code>jkelly</code>方案，或者<code>hexo</code>方案 。</p>
-<p><code>jkelly</code>和<code>hexo</code>均支持一次配置完成后，使用<code>markdown</code>编辑博客内容的方式。不同点在于<code>jeklly</code>的本地开发环境 配置比较麻烦，虽然<code>GitHub Pages</code>提供了在线生成网页，通常无需配置本地<code>jkelly</code>环境，即便是基于<code>jkelly</code>模板的开发，也可以直接提交<code>jkelly</code>源文件，由<code>GitHub Pages</code>在线完成<code>html</code>文件转化。但是如果想修改网页后本地预览效果，本地开发环境还是很有必要的。而且<code>jkelly</code>不管啥文件都直接在线自动转换了，也不便于区分草稿和正式版本。关于<code>jkelly</code>的使用可以参考<a href="http://jmcglone.com/guides/github-pages/" target="_blank" rel="noopener">Creating and Hosting a Personal Site on GitHub</a>。</p>
-<p>考虑到<code>jkelly</code>开发环境的部署难度，碰巧又在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo模板</a>中看到了一个喜欢的<a href="https://yelog.org/" target="_blank" rel="noopener">三栏式布局</a>，最终就决定使用<code>hexo</code>了。</p>
-<p><img src="/2020/02/13/how-to-write-this-blog/hexo_on_github_pages.png" alt></p>
-<p>跟<code>jkelly</code>类似，<code>hexo</code>也是一个将<code>markdown</code>转换为静态网页的工具，不同点在于<code>GitHub Pages</code>内置了<code>jkelly</code>开发环境，我们直接上传<code>jkelly</code>源码即可。<code>hexo</code>没有<code>GitHub Pages</code>在线解析的支持，我们需要本地完成解析转换后，直接将得到的<code>html</code>页面归档至<code>GitHub Pages</code>中。好处是<code>hexo</code>是基于<code>node.js</code>的，开发环境相当友好。</p>
-<p>接下来我们就部署<code>hexo</code>，具体看看。</p>
-<h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><p> 安装<code>Hexo</code>只需几分钟时间，有较多教程可以参考，推荐参考 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官网教程</a>和 <a href="https://www.jianshu.com/p/1c888a6b8297?utm_source=oschina-app" target="_blank" rel="noopener">hexo——轻量、简易、高逼格的博客</a>。</p>
-<p>安装<code>hexo</code>步骤如下：</p>
-<ol>
-<li><strong>安装<code>Node.js</code></strong></li>
-</ol>
-<blockquote>
-<ul>
-<li>前往 <a href="https://nodejs.org/en/，点击`12.16.1" target="_blank" rel="noopener">https://nodejs.org/en/，点击`12.16.1</a> LTS`或当前推荐的LTS版本下载；</li>
-<li>安装；</li>
-<li>打开<code>Command Prompt</code>，输入<code>node -v</code>，得到：<code>v12.16.1</code>，表明安装成功；</li>
-</ul>
-</blockquote>
-<ol start="2">
-<li><strong>安装<code>Git</code></strong></li>
-</ol>
-<blockquote>
-<ul>
-<li>前往 <a href="https://git-scm.com/，点击`Downloads`，点击`Windows`下载；" target="_blank" rel="noopener">https://git-scm.com/，点击`Downloads`，点击`Windows`下载；</a></li>
-<li>安装；</li>
-<li>打开<code>Command Prompt</code>， 输入<code>git --version</code>得到：<code>git version 2.15.0.windows.1</code>，表明安装成功；</li>
-</ul>
-</blockquote>
-<ol start="3">
-<li><strong>使用淘宝NPM镜像</strong></li>
-</ol>
-<ul>
-<li><blockquote>
-<p>执行<code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org</code>，切换为淘宝镜像。后续的<code>npm</code>指令替换为<code>cnpm</code>指令，可加快下载速度。</p>
-</blockquote>
-</li>
-</ul>
-<ol start="4">
-<li><strong>安装<code>Hexo</code></strong></li>
-</ol>
-<blockquote>
-<ul>
-<li>打开<code>Command Prompt</code>输入<code>npm install -g hexo-cli</code>，回车开始安装；</li>
-<li>输入<code>hexo -v</code>得到<code>hexo-cli: 3.1.0</code>等一串数据表示安装成功；</li>
-</ul>
-</blockquote>
-<ol start="5">
-<li><strong>创建本地博客测试安装</strong></li>
-</ol>
-<blockquote>
-<ul>
-<li>在D盘下创建文件夹<code>blog</code>；</li>
-<li>打开<code>Command Prompt</code>切换至<code>blog</code>目录；</li>
-<li>输入<code>hexo init</code>将<code>blog</code>文件夹初始化成一个博客文件夹；</li>
-<li>输入<code>npm install</code>安装依赖包；</li>
-<li>输入<code>hexo g</code>生成网页。由于我们还没创建任何博客，生成的网页会展示<code>Hexo</code>里面自带了一个<code>Hello World</code>的博客；</li>
-<li>输入<code>hexo s</code>将生成的网页放在了本地服务器；</li>
-<li>浏览器里输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看到<code>Hello World</code>博客；</li>
-<li>回到<code>Command Prompt</code>，按<code>Ctrl+C</code>结束。此时再看<code>http://localhost:4000/</code>就无法访问了。</li>
-</ul>
-</blockquote>
-<ol start="6">
-<li><strong>发布一篇博客</strong></li>
-</ol>
-<blockquote>
-<ul>
-<li>继续在<code>Command Prompt</code>里，输入 <code>hexo new &quot;My First Post&quot;</code>；</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>在<code>.\blog\source_posts</code>路径下，会有一个<code>My-First-Post.md</code>的文件。 编辑该文件后保存。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>回到<code>Command Prompt</code>，输入<code>hexo g</code>和<code>hexo s</code>后，即可在<code>http://localhost:4000</code>查看成果。</li>
-</ul>
-</blockquote>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="将本地博客部署在Github上"><a href="#将本地博客部署在Github上" class="headerlink" title="将本地博客部署在Github上"></a><strong>将本地博客部署在<code>Github</code>上</strong></h2><p>经过前面步骤，我们已经有了本地博客。只要把本地博客部署（<code>deploy</code>）到Github.io对应的Repository中就可以供其他人访问了。</p>
-<ol>
-<li><strong>获取<code>Github</code>对应的<code>Repository</code>的链接。</strong></li>
-</ol>
-<blockquote>
-<ul>
-<li>登陆<code>Github</code>，进入到名称为<code>xxx.github.io</code>的<code>Repository</code>中；</li>
-<li>复制URL备用；</li>
-</ul>
-</blockquote>
-<ol start="2">
-<li><strong>修改博客的配置文件</strong></li>
-</ol>
-<blockquote>
-<ul>
-<li>打开本地博客配置文件<code>./blog/_config.yml</code>，找到<code>#Deployment</code>，填入以下内容：</li>
-</ul>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: 前面一步得到的xxx.github.io的Repository地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><strong>部署</strong></li>
-</ol>
-<blockquote>
-<ul>
-<li>打开<code>Command Prompt</code>切换至blog目录；</li>
-<li>输入<code>npm install hexo-deployer-git --save</code>安装hexo-deployer-git，此步骤只需要做一次。</li>
-<li>输入<code>hexo d</code>，得到<code>INFO Deploy done: git</code>即为部署成功。原来Repository中的文件会被自动覆盖；</li>
-</ul>
-</blockquote>
-<ol start="4">
-<li><strong>查看成果</strong></li>
-</ol>
-<blockquote>
-<ul>
-<li>前往博客地址<a href="http://xxx.github.io即可访问。" target="_blank" rel="noopener">http://xxx.github.io即可访问。</a></li>
-</ul>
-</blockquote>
-<h2 id="归档hexo源文件"><a href="#归档hexo源文件" class="headerlink" title="归档hexo源文件"></a>归档<code>hexo</code>源文件</h2><p>前面转换完成的<code>hexo</code>网页已经推送保存至<code>Repository</code>对应的<code>master</code>分支了，那本地的<code>hexo</code>源文件是否也可以保存在<code>github</code>中呢，可以参考<a href="https://www.jianshu.com/p/0b1fccce74e0" target="_blank" rel="noopener">利用Hexo在多台电脑上提交和更新github pages博客</a>中的描述完成<code>hexo</code>源文件归档。</p>
-<ol>
-<li><strong>在<code>github io</code>博客<code>Repository</code>中创建<code>hexo_source</code>分支；</strong></li>
-<li><strong><code>clone</code>创建的<code>hexo_source</code>分支到本地，并删除全部文件后提交，确保<code>hexo_source</code>分支目录为空；</strong></li>
-<li><strong>将前面的<code>hexo</code>源码拷贝至本地<code>hexo_source</code>分支目录中；</strong></li>
-<li><strong>打开<code>Command Prompt</code>切换至<code>hexo_source</code>分支目录，执行<code>hexo clean</code>、<code>git add .</code>、<code>git commit -m &#39;提交说明&#39;</code>、<code>git push</code>即可将博客hexo源码归档至github的<code>hexo_source</code>分支中 ；</strong></li>
-</ol>
-<p>从<code>.gitignore</code>文件中可见如下文件和编译无关，不用提交。以后如果遇到包的版本变更频繁，也可以考虑提交node_modules/归档。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules&#x2F;</span><br><span class="line">public&#x2F;</span><br><span class="line">.deploy*&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="更换电脑编辑"><a href="#更换电脑编辑" class="headerlink" title="更换电脑编辑"></a>更换电脑编辑</h2><p>在<code>github</code>上编辑博客的最显著的一个优势是可以充分利用<code>git</code>，数据保存在云端，替换电脑后也可以随时编辑博客。那如何在替换电脑时继续编辑呢？可以参照如下步骤：</p>
-<ol>
-<li><strong>确认电脑上已有<code>node</code>和<code>git</code>环境。<code>node</code>安装非常简单，这是我们选择<code>hexo</code>，而不是<code>jkelly</code>的初衷；</strong></li>
-<li><strong>拉取<code>github io</code>博客<code>Repository</code>中的<code>hexo_source</code>分支到本地；</strong></li>
-<li><strong>打开<code>Command Prompt</code>，输入<code>npm install -g hexo-cli</code>，安装<code>hexo</code>命令行工具；</strong></li>
-<li><strong>切换至<code>hexo_source</code>分支目录，执行<code>npm install</code>命令即可下载必要的npm包后，正常开展博客编辑和部署工作了。因为hexo依赖的包都记录在<code>package.json</code>文件中了，<code>npm install</code>命令可直接根据列表安装所需要的包；</strong></li>
-<li><strong>执行<code>hexo g</code>编译网页，执行<code>hexo s</code>本地预览，执行<code>hexo d</code>推送部署；</strong></li>
-<li><strong>执行<code>hexo clean</code>后清除缓存文件，即可将源文件归档至<code>github</code>；</strong></li>
-</ol>
-<h2 id="编辑草稿"><a href="#编辑草稿" class="headerlink" title="编辑草稿"></a>编辑草稿</h2><p>我们已经知道<code>hexo</code>实际上是一款将<code>markdown</code>转换为<code>html</code>的工具，所以如果刚开始编写一篇文章，并且编辑多次后才提交可以采用如下工作方式。</p>
-<ol>
-<li><strong>打开<code>Command Prompt</code>，切换至拉取的博客<code>Repository</code>中的<code>hexo_source</code>分支；</strong></li>
-<li><strong>执行<code>hexo new draft</code>创建待编辑文章，编辑完成后<code>commit</code>至本地’Repository’，或<code>push</code>至<code>github</code>。该步骤可多次执行直到文章编辑完成；</strong></li>
-<li><strong>执行<code>hexo d</code>发表博客;</strong></li>
-</ol>
-<h1 id="完善"><a href="#完善" class="headerlink" title="完善"></a>完善</h1><h2 id="显示图片"><a href="#显示图片" class="headerlink" title="显示图片"></a>显示图片</h2><p> 测试后会发现，使用<code>markdown</code>传统方式添加的图片是无法正常在网页端显示的，这是因为<code>hexo</code>无法正确的将本地图片路径转换为网页文件中的格式。这是我们就需要借助<code>hexo-asset-image</code>工具完成文件路径的转换，步骤如下：</p>
-<ol>
-<li><strong>打开<code>Command Prompt</code>执行如下命令安装图片路径转换工具<code>hexo-asset-image</code>。注意我们并未使用官方推荐的方式<code>npm install hexo-asset-image --save</code>，实测发现官方包有问题，无法显示图片。网上有仓库解决了该问<code>https://github.com/xcodebuild/hexo-asset-image</code>，为了避免该库后续变化，我已fork至自己账户中 。执行完该命令后会在包列表<code>package.json</code>中添加相关信息，换电脑或重新下载后只要执行<code>npm install</code>即可。</strong></li>
-</ol>
-<blockquote>
-<ul>
-<li><code>npm install https://github.com/zongkai28/hexo-asset-image --save</code></li>
-</ul>
-</blockquote>
-<ol start="2">
-<li><p><strong>在<code>config.yml</code>配置文件中的<code>post_asset_folder</code>属性修改为<code>true</code>.</strong></p>
-</li>
-<li><p><strong>使用<code>hexo new post test</code>命令新建一篇文章，可以发现在<code>_post</code>目录下同时出现了<code>test.md</code>文件和<code>test</code>文件夹，此时在<code>test.md</code>中使用<code>![](test/test.jpg)</code>即可在<code>markdown</code>和<code>html</code>中均正常显示图片。</strong></p>
-</li>
-</ol>
-<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>可在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题</a>站点选择自己喜欢的主题，比如：<a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">三栏式布局</a>。 </p>
-<p>这里以该三栏式布局主题为例，详细步骤如下，大概思路是把整个主题的文件克隆到我们博客的主题文件夹中，在配置文件中注明使用该主题。</p>
-<ol>
-<li><strong>打开<code>Command Prompt</code>切换至拉取的博客<code>Repository</code>中的<code>hexo_source</code>分支的themes目录，执行如下命令获取主题。</strong> </li>
-</ol>
-<blockquote>
-<ul>
-<li><code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></li>
-</ul>
-</blockquote>
-<p><strong>2. 修改博客配置文件<code>_config.yml</code>。</strong></p>
-<blockquote>
-<ul>
-<li>修改 <code>theme:</code>，把<code>hexo</code>默认的<code>lanscape</code>修改成<code>next</code>，即<code>theme: next</code>；</li>
-<li>修改 <code># Site</code>，添加博客名称，作者名字等。修改<code>language</code>，填入英文<code>en</code>或者中文<code>zh-Hans</code>;</li>
-<li>修改<code># URL</code>，填入自己的博客地址，比如 <code>url: https://xxx.github.io</code></li>
-</ul>
-</blockquote>
-<p><strong>3. 重新生成部署即可</strong></p>
-<blockquote>
-<ul>
-<li>回到<code>Git Bash</code>，输入<code>hexo g</code>，之后输入<code>hexo s</code>本地测试，或<code>hexo d</code>直接部署。</li>
-</ul>
-</blockquote>
-<p><strong>4. 前往你的博客地址<code>http://xxx.github.io</code>查看成果</strong></p>
-<h1 id="主要参考资料"><a href="#主要参考资料" class="headerlink" title="主要参考资料"></a>主要参考资料</h1><ul>
-<li><a href="https://www.jianshu.com/p/1c888a6b8297?utm_source=oschina-app" target="_blank" rel="noopener">hexo——轻量、简易、高逼格的博客</a></li>
-<li><a href="https://www.jianshu.com/p/0b1fccce74e0" target="_blank" rel="noopener">利用Hexo在多台电脑上提交和更新github pages博客</a> </li>
-</ul>
-
-      
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://zongkai28.github.io/2020/02/13/how-to-write-this-blog/" data-id="ck7pnshii0000bozh0e2h0o4g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li></ul>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
     </div>
-  </div>
-
-
-  
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode === 13){return false;}">
+        <input id="local-search-input" class="search" type="text" placeholder="Search..." />
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/03/03/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/19/my-project-management-practice/">我的项目管理实践</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/13/how-to-write-this-blog/">如何在`github pages`上部署个人博客</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    <div class="clearfix"></div>
+</div>
 
-  
+    
+    <nav id="title-list-nav">
+        
+        <a  class=""
+           href="/2020/02/13/how-to-write-this-blog/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="如何在`github pages`上部署个人博客">如何在`github pages`上部署个人博客</span>
+            <span class="post-date" title="2020-02-13 05:58:04">2020/02/13</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/02/19/my-project-management-practice/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="我的项目管理实践">我的项目管理实践</span>
+            <span class="post-date" title="2020-02-19 09:43:48">2020/02/19</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
 </aside>
+<div class="post index">
+    <div class="pjax">
+        <article class="index">
+            <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
+<blockquote>
+<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
+</blockquote>
+<blockquote>
+<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
+</blockquote>
+<blockquote>
+<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+</blockquote>
+<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
+<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
+<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
+<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
+<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
+<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源</p>
+<p>主要功能：</p>
+<ul>
+<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
+<li>pad/手机等移动端适配</li>
+<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
+</ul>
+
+        </article>
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 宗凯<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        <p>
+            <a  class="dashang" onclick="dashangToggle()">赏</a>
+        </p>
+        
+        
     </div>
-  </div>
-</footer>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 Yelog</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': [],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
 
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+    /*引用块样式*/
+    
 
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
 
 
 
 
-<script src="/js/script.js"></script>
 
 
 
-
-  </div>
-</body>
 </html>
